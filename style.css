@@ -1,0 +1,139 @@
+.container {
+  margin: auto;
+}
+.slider {
+  font-family: "Arial Black";
+  margin: auto;
+  position: relative;
+  height: 260px;
+  width: 900px;
+  overflow-x: hidden;
+  padding-top: 230px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.slider__group {
+  font-size: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+}
+.slider__item {
+  display: inline-block;
+  width: 200px;
+  margin: 0 10px;
+  text-align: left;
+  position: relative;
+}
+.slider__item:hover {
+  z-index: 1;
+}
+.slider__item figcaption {
+  display: block;
+  padding-top: 10px;
+}
+.slider__wrapper {
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+}
+.slider__wrapper:hover {
+  top: -10px;
+  left: -10px;
+  padding: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  font-size: 12px;
+}
+.slider__img {
+  max-width: 100%;
+  display: block;
+  max-height: 280px;
+}
+.slider__description {
+  display: none;
+  white-space: normal;
+}
+.slider #group-1:checked ~ .slider__group {
+  left: 10px;
+  transition: left 1s;
+}
+.slider #group-2:checked ~ .slider__group {
+  left: -870px;
+  transition: left 1s;
+}
+.slider #group-3:checked ~ .slider__group {
+  left: -1750px;
+  transition: left 1s;
+}
+.slider #group-4:checked ~ .slider__group {
+  left: -2630px;
+  transition: left 1s;
+}
+.modal {
+  display: none;
+  padding: 10px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: rgba(128,128,128,0.8);
+  color: #fff;
+  font-family: Arial;
+  font-size: 13px;
+}
+.modal__description {
+  margin: 0;
+  max-width: 50%;
+}
+.modal__img {
+  width: 400px;
+  height: 400px;
+  left: 50%;
+  top: 50%;
+  margin-left: -200px;
+  margin-top: -200px;
+  position: absolute;
+}
+.modal__img img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.modal__close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+.modal__close:hover {
+  opacity: 1;
+}
+.modal__close:before {
+  transform: rotate(45deg);
+}
+.modal__close:after {
+  transform: rotate(-45deg);
+}
+.modal__close:before,
+.modal__close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #fff;
+}
+#modal {
+  display: none;
+}
+#modal:checked ~ .modal {
+  display: block;
+}
